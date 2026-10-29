@@ -171,49 +171,37 @@ IntAct will be examined for experimentally reported molecular interactions invol
 
 The proposed model describes how trophoblast-derived CXCL12 may influence maternal decidual stromal cells through CXCR4. Published experimental evidence supports the biological relevance of this ligand–receptor system in the early maternal–fetal interface.
 
-The database analyses will provide complementary information about gene expression, signaling annotations, protein associations, and experimentally reported molecular interactions. These evidence types must be interpreted separately: gene expression supports cellular plausibility, curated annotations support documented signaling roles, and interaction experiments provide evidence about particular molecular associations.
-
----
+The database analyses will provide complementary information about gene expression, signaling annotations, protein associations, and experimentally reported molecular interactions. These evidence types must be interpreted separately: gene expression supports cellular plausibility, curated annotations support documented signaling roles, and interaction experiments provide evidence about particular molecular Paragraph form please each number
 
 ## Synthesis of Findings
-
-### 1\. What sender cell did you choose, and in what tissue or biological context does it act?
-
-The selected sender cell was the placental trophoblast, focusing on human first-trimester trophoblast cells. These cells participate in placental development and communicate with maternal cells at the maternal–fetal interface.
-
-### 2\. What signaling molecule did you identify, and what evidence supports its production or secretion?
-
-The candidate signaling molecule was CXCL12. Published research has reported CXCL12 expression and secretion by human trophoblast cells. The Human Protein Atlas will be used to examine the expression evidence for the selected cell population. RNA expression and reported secretion are distinct forms of evidence and should be described separately.
-
-### 3\. What receptor receives the signal, and which receiver cell did you select?
-
-The proposed receptor was CXCR4, and the receiver cell was the maternal decidual stromal cell. Published research supports the involvement of CXCR4 in CXCL12-mediated effects on decidual stromal cell invasion.
-
-### 4\. What type of cell-to-cell signaling is represented?
-
-The proposed mechanism represents paracrine signaling, in which a signaling molecule released by one cell acts on another cell. In this model, trophoblast-derived CXCL12 may act on CXCR4 expressed by neighboring maternal decidual stromal cells.
-
-### 5\. Which proteins in your STRING network appear most relevant to the proposed response?
-
-This answer will be completed using the actual STRING results. Select proteins with documented relationships to CXCR4 or relevant cellular functions, and explain their potential relevance using reliable sources. Do not assume that a protein is part of the pathway solely because it appears in the network.
-
-### 6\. What enriched pathway or biological process is consistent with the proposed mechanism?
-
-Report the strongest relevant enrichment returned by STRING, including its category, identifier, protein count, and FDR. If the enrichment concerns cell migration or chemokine signaling, explain its relevance to maternal–fetal communication. If no relevant term is enriched, report that result instead.
-
-### 7\. What did IntAct show for the molecular interaction examined?
-
-Report the exact protein pair, interaction classification, experimental method, accession, and supporting publication. If no suitable interaction is found, state that the search did not establish a suitable experimental interaction for the selected model. Do not treat a functional association as proof of direct binding.
-
-### 8\. Which parts of the final model are strongly supported, and which remain an inference?
-
-Published research supports trophoblast CXCL12 secretion and CXCR4-mediated effects on decidual stromal cell invasion. Database expression and signaling annotations can provide complementary support. The involvement of additional proteins in a specific downstream sequence remains uncertain unless supported by direct mechanistic experiments.
-
-### 9\. What cellular response is expected in the receiver cell, and why?
-
-The proposed response is increased decidual stromal cell invasion and associated changes in extracellular matrix remodeling. This interpretation is consistent with published studies of CXCL12–CXCR4 signaling at the maternal–fetal interface. The magnitude and exact molecular mechanism should not be generalized beyond the experimental conditions described in the supporting literature.
-
 ——
+### 1. Sender cell
+The sender cell is the human first-trimester placental trophoblast. These cells drive placental development and invade the maternal decidua, so they communicate directly with maternal cells at the maternal–fetal interface.
+
+### 2. Signaling molecule and evidence
+The signaling molecule is CXCL12. In OmniPath, CXCL12 (P48061) is annotated as secreted, with location records from UniProt and HPA_secretome among others, and it carries 30 ligand-parent annotations. These database annotations are separate from the published evidence. Wu et al. (2004) reported CXCR4 and CXCL12 expression in first-trimester human trophoblast cells, and Wu et al. (2005) reported that these cells express and secrete CXCL12. RNA expression in the Human Protein Atlas is a third and distinct line of evidence, so insert your own HPA result (cell type and expression level) here.
+
+### 3. Receptor and receiver cell
+The receptor is CXCR4, which OmniPath annotates as a transmembrane receptor, and the receiver is the maternal decidual stromal cell. In first-trimester decidual stromal cells, CXCL12 and trophoblast-conditioned medium increased migration and invasion, and neutralizing antibodies against CXCL12 or CXCR4 abolished the effect. A related study is Ren et al. 2012 (Hum Reprod 27:366–74).
+
+### 4. Type of signaling
+The mechanism is paracrine signaling. One study concluded that trophoblast-derived CXCL12 promoted migration and invasion of decidual epithelial cells through CXCR4 rather than CXCR7 in a paracrine manner, although that study used epithelial cells rather than stromal cells. CXCL12 also acts in an autocrine manner, because trophoblast-derived CXCL12 increases trophoblast invasiveness by binding CXCR4.
+
+### 5. Most relevant STRING proteins
+The STRING network contains 11 proteins. GNAI1, GNAI2, GNB1 and GNG2 are G protein subunits and connect to the GPCR and adenylate cyclase terms in the enrichment. ARRB1 is β-arrestin, and the title of the IntAct publication describes the CXCR7/CXCR4 heterodimer recruiting β-arrestin. ACKR3 is a second CXCL12-binding receptor that forms a heterodimer with CXCR4. CCR5 and CD4 are related chemokine-receptor and HIV entry proteins, which explains the symbiont entry term but makes them less relevant to placenta. ITCH is an E3 ubiquitin ligase, and I would describe it only as a network member unless you find a source linking it to CXCR4 regulation. STRING alone does not place any of these proteins in a pathway sequence.
+
+### 6. Enriched process
+The strongest term was chemokine-mediated signaling pathway (GO Biological Process), with a signal of about 2.67, an FDR of about 2.8e-06 and a gene count of about 6. Check these values against the Analysis table. The directly matching term was CXCL12-activated CXCR4 signaling pathway, with an FDR of about 1.3e-03. These results fit CXCL12 acting through CXCR4, and the GPCR and calcium terms point to receptor signaling that could drive migration and invasion. The GO identifiers and the proteins in each term are not visible in your screenshot, so copy them from the table.
+
+### 7. IntAct
+The protein pair was CXCR4 and ACKR3 (CXCR7), and the main record was EBI-21294877. It is classified as a physical association and was detected by anti-tag coimmunoprecipitation in human HEK293 cells. The supporting publication is Décaillot et al. 2011 (J Biol Chem, PubMed 21730065). A second record, EBI-21298271, reports colocalization by confocal microscopy in mouse neuroblastoma cells. This evidence shows a physical association between the two receptors. It does not prove direct binding, and it does not place ACKR3 downstream of CXCR4 after CXCL12 stimulation.
+
+### 8. Strong support versus inference
+The strongly supported parts are trophoblast CXCL12 expression and secretion, and the CXCR4-dependent increase in decidual stromal cell migration and invasion. OmniPath, STRING and IntAct give complementary database support. The specific downstream proteins and their order remain inference, because STRING and IntAct report associations rather than stepwise evidence. The MMP-2/MMP-9 link is also inference (see question 9).
+
+### 9. Expected response in the receiver cell
+The expected response is increased decidual stromal cell migration and invasion, based on the studies cited above. The MMP-2/MMP-9 link needs care. The evidence I found is from trophoblast cells: in HTR8/SVneo trophoblast cells, SDF-1 raised MMP-2 and MMP-9 expression, and this was blocked by inhibiting the receptor. I found no direct evidence of this link in decidual stromal cells, so the dashed arrow in your diagram is appropriate, and the text should call MMP-2/MMP-9 a proposed mechanism borrowed from trophoblast data. The response also isn't simply "more invasion," because trophoblast-derived CXCL12 can raise CD82 expression in decidual stromal cells, which controls trophoblast over-invasion. The magnitude and mechanism should not be generalized beyond the cells and conditions used in the studies.
+
 
 ### References and Database Resources
 
